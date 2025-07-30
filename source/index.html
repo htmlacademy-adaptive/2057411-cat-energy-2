@@ -6,6 +6,10 @@
   <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -13,7 +17,11 @@
   <header class="main-header">
     <nav class="main-nav">
       <a class="main-nav__logo logo" href="index.html">
-        <img class="logo__image" src="images/logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width:1440px)" srcset="images/logo-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width:768px)" srcset="images/logo-tablet.svg">
+          <img class="logo__image" src="images/logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+        </picture>
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
@@ -37,7 +45,11 @@
         <h1 class="promo__title title">Функциональное
           питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__img" src="#" width="280" height="270" alt="Упаковка с куриным кормом">
+        <picture>
+          <source width="552" height="499" type="image/png" media="(min-width:1440px)" srcset="images/promo-food-desktop@1x.png 1x, images/promo-food-desktop@2x.png 2x">
+          <source width="709" height="609" type="image/png" media="(min-width:768px)" srcset="images/promo-food-tablet@1x.png 1x, images/promo-food-tablet@2x.png 2x">
+          <img class="promo__img" src="images/promo-food-mobile@1x.png" srcset="images/promo-food-mobile@2x.png 2x" width="280" height="270" alt="Упаковка с куриным кормом">
+        </picture>
         <a class="promo__link button" href="#">Подобрать программу</a>
       </div>
     </section>
@@ -47,7 +59,7 @@
         <div class="programs__item programs__item--slim">
           <h3 class="programs__title">Похудение</h3>
           <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="catalog__link" href="#">Каталог slim</a>
+          <a class="programs__link" href="#">Каталог slim</a>
         </div>
         <div class="programs__item programs__item--pro">
           <h3 class="programs__title">Набор массы</h3>
@@ -94,9 +106,18 @@
           </dl>
           <p class="example__cost">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
         </div>
-        <img class="example__image example__image--before" width="280" height="256" src="#" alt="Толстый и худой кот">
-        <div class="example__switcher switcher">
-          <button class="switcher__toggle" type="button" aria-label="Передвижение слайдера"></button>
+        <div class="example__container slider">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+            <img class="slider__image" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Толстый и худой кот">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+            <img class="slider__image" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Толстый и худой кот">
+          </picture>
+          <button class="slider__toggle" type="button" aria-label="Передвижение слайдера"></button>
         </div>
       </div>
     </section>
@@ -109,7 +130,11 @@
         </address>
       </div>
       <div class="contacts__map-wrapper">
-        <img class="contacts__map-img" src="#" width="320" height="362" alt="Местоположение магазина на карте">
+        <picture>
+          <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
+          <source width="1440" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/location-tabletp@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
+          <img class="contacts__map-img" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Местоположение магазина на карте">
+        </picture>
       </div>
     </section>
   </main>
@@ -138,7 +163,7 @@
     </ul>
     <a class="main-footer__copyright copyright" href="#">
       <span class="copyright__text">HTML Academy</span>
-      <img class="copyright_image" src="#" width="50" height="50" alt="HTML Academy">
+      <img class="copyright__image" src="#" width="50" height="50" alt="HTML Academy">
     </a>
     </div>
   </footer>
