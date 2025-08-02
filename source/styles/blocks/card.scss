@@ -1,0 +1,38 @@
+.card__link-title {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-text-color-2;
+}
+
+.card__title--plus {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $text-grey;
+}
+
+.card__item {
+  font-size: 12px;
+  line-height: 16px;
+  color: $basic-text-color;
+}
+
+.card__button {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-white;
+}
+
+.card__description {
+  font-size: 12px;
+  line-height: 16px;
+  color: $basic-text-color;
+}
+
+.button--accent {
+  color: $basic-text-color;
+}

@@ -1,0 +1,26 @@
+.optional-products__title {
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+.product__title {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic-text-color-2;
+}
+
+.product__content {
+  line-height: 14px;
+  color: $basic-text-color;
+}
+
+.product__button {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-white;
+}

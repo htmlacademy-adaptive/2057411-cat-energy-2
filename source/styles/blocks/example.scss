@@ -1,0 +1,29 @@
+.example__title {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic-black;
+}
+
+.example__text {
+  color: #444444;
+}
+
+.example__value {
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+.example__option {
+  font-size: 12px;
+  line-height: 12px;
+  color: $basic-text-color;
+}
+
+.example__cost {
+  font-family: $primary-font;
+  line-height: 20px;
+  color: $basic-black;
+}
