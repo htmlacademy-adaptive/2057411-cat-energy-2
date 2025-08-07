@@ -33,6 +33,12 @@
   color: $basic-text-color;
 }
 
+.card--add {
+  background-image: url("../../icons/stack.svg#icon-plus");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
 .button--accent {
   color: $basic-text-color;
 }

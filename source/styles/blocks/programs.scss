@@ -3,10 +3,36 @@
 }
 
 .programs__title {
+  position: relative;
   font-family: $primary-font;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  padding-left: 90px;
+}
+
+.programs__title--slim::after {
+  content: "";
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-repeat: no-repeat;
+  background-size: 50px 53px;
+  width: 50px;
+  height: 53px;
+  position: absolute;
+  top: -7px;
+  left: 7px;
+}
+
+.programs__title--pro::after {
+  content: "";
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-repeat: no-repeat;
+  background-size: 67px 50px;
+  width: 67px;
+  height: 50px;
+  position: absolute;
+  top: -6px;
+  left: 2px;
 }
 
 .programs__description {
@@ -14,8 +40,24 @@
 }
 
 .programs__link {
+  position: relative;
   font-family: $primary-font;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+.programs__link::after {
+  content: "";
+  display: block;
+  background-color: $basic-black;
+  width: 24px;
+  height: 12px;
+  mask-image: url("../../icons/stack.svg#icon-arrow");
+  mask-position: 100%;
+  mask-size: 24px 12px;
+  mask-repeat: no-repeat;
+  position: absolute;
+  top: 7px;
+  left: 102px;
 }

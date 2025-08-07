@@ -1,0 +1,44 @@
+.slider {
+  position: relative;
+}
+
+.slider__toggle {
+  position: absolute;
+  cursor: pointer;
+  background-color: #666666;
+  border: none;
+  border-radius: 2px;
+  width: 4px;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: -2px;
+}
+
+.slider__toggle::before {
+  content: "";
+  background-color: $basic-white;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__toggle::after {
+  content: "";
+  background-color: #666666;
+  width: 24px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mask-image: url("../../icons/stack.svg#slider-arrows");
+  mask-position: 50%;
+  mask-size: 24px 18px;
+  mask-repeat: no-repeat;
+}

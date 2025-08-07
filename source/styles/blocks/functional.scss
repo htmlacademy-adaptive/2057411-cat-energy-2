@@ -5,6 +5,37 @@
   color: $basic-black;
 }
 
+.functional__item::before {
+  content: "";
+  background-color: $accent-color;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.functional__item--nutrient::before {
+  background-image: url("../../icons/stack.svg#icon-leaf");
+  background-size: 30px 32px;
+}
+
+.functional__item--powder::before {
+  background-image: url("../../icons/stack.svg#icon-powder");
+  background-size: 26px 28.5px;
+}
+
+.functional__item--diet::before {
+  background-image: url("../../icons/stack.svg#icon_eat");
+  background-size: 25px 30px;
+}
+
+.functional__item--result::before {
+  background-image: url("../../icons/stack.svg#icon-result");
+  background-size: 26px 31px;
+}
+
 .functional__description {
   color: $basic-text-color;
 }
