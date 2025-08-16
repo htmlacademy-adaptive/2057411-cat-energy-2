@@ -1,0 +1,35 @@
+.main-footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__logo-link {
+    margin-right: 160px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__social {
+    margin-right: 120px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__logo-link {
+    margin-right: 416px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__social {
+    margin-right: 376px;
+  }
+}

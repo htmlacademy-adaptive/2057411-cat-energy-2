@@ -1,0 +1,32 @@
+.main-header {
+  display: flex;
+  flex-direction: column;
+  color: $basic-black;
+}
+
+@media (min-width: $desktop-width) {
+  .main-header--index {
+    position: relative;
+  }
+
+  .main-header--index::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    z-index: -1;
+    height: 694px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%), url("../../images/index-background-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: rgba(104, 183, 56, 0.85);
+    background-size: cover;
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: 2dppx) {
+  .main-header--index::before {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%), url("../../images/index-background-desktop@2x.png");
+  }
+}

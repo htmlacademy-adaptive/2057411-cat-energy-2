@@ -6,6 +6,13 @@
   color: $basic-text-color-2;
 }
 
+@media (min-width: $tablet-width) {
+  .card__link-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 .card__title--plus {
   font-family: $primary-font;
   font-size: 16px;
@@ -14,10 +21,24 @@
   color: $text-grey;
 }
 
+@media (min-width: $tablet-width) {
+  .card__title--plus {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 .card__item {
   font-size: 12px;
   line-height: 16px;
   color: $basic-text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .card__item {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__button {
@@ -31,6 +52,13 @@
   font-size: 12px;
   line-height: 16px;
   color: $basic-text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .card__description {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .card--add {

@@ -8,10 +8,37 @@
   color: $basic-black;
 }
 
+@media (min-width: $tablet-width) {
+  .subscription__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
 .subscription__description {
   font-size: 16px;
   line-height: 24px;
   color: $basic-black;
+}
+
+@media (min-width: $tablet-width) {
+  .subscription__description {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.subscription__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .subscription__form {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 .subscription__control {

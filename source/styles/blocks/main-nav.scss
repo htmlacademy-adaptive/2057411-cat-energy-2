@@ -23,3 +23,60 @@
   background-image: url("../../icons/stack.svg#close-mobile-menu");
 }
 
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__list a {
+  color: $basic-black;
+}
+
+.main-nav {
+  width: 279px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 704px;
+    margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 1220px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__logo {
+    width: 174px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__logo {
+    width: 202px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    width: 436px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 475px;
+  }
+}
+

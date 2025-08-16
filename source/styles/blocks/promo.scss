@@ -1,6 +1,33 @@
 .promo {
   font-family: $primary-font;
   color: $basic-white;
+  background-image: linear-gradient(to top, #ffffff 178px, rgba(104, 183, 56, 0.85) 302px), url("../../images/index-background-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
+  margin-bottom: 20px;
+}
+
+@media (min-resolution: 2dppx) {
+  .promo {
+    background-image: linear-gradient(to top, #ffffff 178px, rgba(104, 183, 56, 0.85) 178px), url("../../images/index-background-mobile@2x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    color: $basic-black;
+    position: relative;
+    background: none;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    margin-bottom: 82px;
+  }
 }
 
 .promo__title {
@@ -8,13 +35,34 @@
   line-height: 36px;
 }
 
+@media (min-width: $tablet-width) {
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
 .promo__slogan {
   line-height: 14px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__link {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__link {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

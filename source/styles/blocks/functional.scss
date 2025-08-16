@@ -1,8 +1,51 @@
+.functional {
+  margin-bottom: 49px;
+}
+
+@media (min-width: $tablet-width) {
+  .functional {
+    margin-bottom: 92px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional {
+    margin-bottom: 69px;
+  }
+}
+
 .functional__title {
   font-family: $primary-font;
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.functional__list {
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 179px;
+    margin-bottom: 149px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional__list {
+    gap: 94px;
+    margin-bottom: 126px;
+  }
 }
 
 .functional__item::before {
@@ -36,8 +79,34 @@
   background-size: 26px 31px;
 }
 
+@media (min-width: $tablet-width) {
+  .functional__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .functional__number {
+    position: absolute;
+    margin-left: 118px;
+    margin-top: -40px;
+    margin-bottom: 37px;
+  }
+}
+
 .functional__description {
   color: $basic-text-color;
+  z-index: 2;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .functional__number {
@@ -45,4 +114,10 @@
   font-size: 280px;
   line-height: 280px;
   color: $basic-grey;
+}
+
+@media (max-width: $tablet-width) {
+  .functional__number {
+    display: none;
+  }
 }
