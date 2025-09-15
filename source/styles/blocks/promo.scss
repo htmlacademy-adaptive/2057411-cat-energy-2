@@ -7,6 +7,7 @@
   background-size: 100%;
   background-color: rgba(104, 183, 56, 0.85);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 @media (min-resolution: 2dppx) {
@@ -21,6 +22,7 @@
     position: relative;
     background: none;
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
@@ -30,39 +32,142 @@
   }
 }
 
+.promo__wrapper {
+  padding-top: 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__wrapper {
+    position: relative;
+    padding-top: 65px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__wrapper {
+    position: relative;
+    min-height: 580px;
+    padding-top: 110px;
+  }
+}
+
 .promo__title {
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .promo__title {
+    max-width: 420px;
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__title {
+    margin-left: 80px;
   }
 }
 
 .promo__slogan {
   line-height: 14px;
   text-transform: uppercase;
+  margin-bottom: 29px;
 }
 
 @media (min-width: $tablet-width) {
   .promo__slogan {
+    max-width: 420px;
     font-size: 20px;
     line-height: 20px;
+    margin: 0;
+    margin-bottom: 21px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__slogan {
+    margin-bottom: 52px;
+    margin-left: 80px;
+  }
+}
+
+.promo-img {
+  display: block;
+  margin-bottom: 3px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__img {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin-top: 29px;
+    margin-right: 221px;
   }
 }
 
 .promo__link {
+  display: block;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-white;
+  background-color: $accent-color;
+  padding: 10px 0;
 }
 
 @media (min-width: $tablet-width) {
-  .promo__link {
+  .promo__link--tablet {
+    position: absolute;
     font-size: 20px;
     line-height: 26px;
+    margin-top: 29px;
+    padding: 14px 24px 14px 26px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__link--tablet {
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__link--tablet {
+    position: static;
+    max-width: 244px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .promo__link--tablet {
+    display: none;
+  }
+}
+
+.promo__link--mobile {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__link--mobile {
+    display: none;
   }
 }

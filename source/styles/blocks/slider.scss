@@ -1,5 +1,49 @@
 .slider {
   position: relative;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 107px;
+  }
+}
+
+.slider__list {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__slide img {
+  display: block;
+  width: 280px;
+  height: 256px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__slide img {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__slide--before {
+  margin-left: 10px;
+}
+
+.slider__slide--before img {
+  clip-path: inset(0 50% 0 0);
+}
+
+.slider__slide--after {
+  position: absolute;
+}
+
+.slider__slide--after img {
+  clip-path: inset(0 0 0 50%);
 }
 
 .slider__toggle {
@@ -12,7 +56,8 @@
   height: 100%;
   display: block;
   top: 0;
-  left: -2px;
+  left: 50%;
+  padding: 0;
 }
 
 .slider__toggle::before {
@@ -41,4 +86,32 @@
   mask-position: 50%;
   mask-size: 24px 18px;
   mask-repeat: no-repeat;
+}
+
+
+.slider__toggle:hover,
+.slider__toggle:focus-visible {
+  background-color: #68b738;
+}
+
+.slider__toggle:hover::before,
+.slider__toggle:focus-visible::before {
+  border-color: #68b738;
+}
+
+.slider__toggle:hover::after,
+.slider__toggle:focus-visible::after {
+  background-color: #68b738;
+}
+
+.slider__toggle:active {
+  background-color: #5eaa2f;
+}
+
+.slider__toggle:active::before {
+  border-color: #5eaa2f;
+}
+
+.slider__toggle:active::after {
+  background-color: #5eaa2f;
 }

@@ -1,7 +1,35 @@
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 20px 74px;
+  padding-bottom: 15px;
+  box-shadow: 0 1px 0 #d9d9d9;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    padding: 0;
+    box-shadow: none;
+    padding-top: 7px;
+  }
+}
+
 .social__link {
   display: inline-block;
   width: 28px;
   height: 22px;
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: #68b738;
+}
+
+.social__link:active {
+  background-color: rgba(104, 183, 56, 0.3);
 }
 
 .social__link--vkontakte {
@@ -24,4 +52,3 @@
   mask-size: 28px 22px;
   mask-repeat: no-repeat;
 }
-

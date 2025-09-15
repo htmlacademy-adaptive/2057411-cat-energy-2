@@ -1,19 +1,94 @@
 .special {
-  background-color: #000000;
+  background-image: url("../../images/background-special-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-size: cover;
+  padding: 59.8px 61px 43px 58px;
+  margin-bottom: 40px;
+}
+
+@media (min-resolution: 2dppx) {
+  .special {
+    background-image: url("../../images/background-special-mobile@2x.png");
+    background-size: 280px auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .special {
+    background-image: url("../../images/background-special-tablet@1x.png");
+    padding: 57px 77px 60.4px;
+    display: grid;
+    grid-template-columns: 62% 1fr;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .special {
+      background-image: url("../../images/background-special-tablet@2x.png");
+      background-size: 100% auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .special {
+    background-image: url("../../images/background-special-desktop@1x.png");
+    padding: 56px 42px 43px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .special {
+      background-image: url("../../images/background-special-desktop@2x.png");
+      background-size: 100% auto;
+    }
+  }
+}
+
+.special__icon {
+  background-image: url("../../icons/stack.svg#icon_gift");
+  background-repeat: no-repeat;
+  background-size: 78px 80px;
+  width: 78px;
+  height: 80px;
+  margin: 0 auto 48px;
+}
+
+@media (min-width: $tablet-width) {
+  .special__icon {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .special__icon {
+    margin-bottom: 46px;
+  }
 }
 
 .special__text {
   font-size: 16px;
   line-height: 20px;
   color: $basic-white;
+  text-align: center;
+  margin: 0;
 }
 
-.special__text::before {
-  content: "";
-  background-image: url("../../icons/stack.svg#icon_gift");
-  background-repeat: no-repeat;
-  background-size: 78px 80px;
-  width: 78px;
-  height: 80px;
-  display: block;
+@media (min-width: $tablet-width) {
+  .special__text {
+    padding-top: 9px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .special__text {
+    text-align: center;
+    padding: 0;
+  }
 }

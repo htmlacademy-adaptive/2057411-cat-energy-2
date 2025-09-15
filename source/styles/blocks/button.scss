@@ -1,3 +1,12 @@
 .button {
   font-family: $primary-font;
 }
+
+.button:hover,
+.button:focus {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
