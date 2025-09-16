@@ -1,0 +1,240 @@
+.example {
+  background-color: #eaeaea;
+  padding-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 575px, #eaeaea 575px, #eaeaea 1081px);
+    padding-bottom: 101px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 134px, #f2f2f2 134px, #f2f2f2 596px);
+    padding-bottom: 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__container {
+    position: relative;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    margin-right: 784px;
+  }
+}
+
+.example__list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 104px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__list {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+  }
+}
+
+.example__list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .example__list-wrapper {
+    justify-content: flex-start;
+    gap: 43px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__list-wrapper {
+    margin-bottom: 61px;
+    gap: 42px;
+  }
+}
+
+.example__description {
+  position: relative;
+  width: 124px;
+  height: 56px;
+  margin: 0;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__description {
+    width: 162px;
+    height: 72px;
+  }
+}
+
+.example__title {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic-black;
+  padding-top: 23px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__title {
+    margin-bottom: 146px;
+  }
+}
+
+.example__text {
+  color: #444444;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__text {
+    margin-bottom: 69px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .example__text br {
+    display: none;
+  }
+}
+
+.example__value {
+  position: absolute;
+  top: 14px;
+  left: 42.5px;
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic-black;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .example__value {
+    font-size: 30px;
+    line-height: 37px;
+    left: 57px;
+  }
+}
+
+.example__value--spent {
+  left: 20.6px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__value--spent {
+    left: 30px;
+  }
+}
+
+.example__option {
+  position: absolute;
+  top: 49px;
+  transform: translate(50%);
+  margin: 0;
+  right: 50%;
+  font-size: 12px;
+  line-height: 12px;
+  color: $basic-text-color;
+  background-color: #eaeaea;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__option {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $basic-white;
+    top: 63px;
+    padding: 0;
+  }
+
+  .example__option--decline {
+    min-width: 114px;
+  }
+
+  .example__option--spent {
+    min-width: 142px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__option {
+    background-color: #f2f2f2;
+  }
+}
+
+.example__cost {
+  font-family: $primary-font;
+  line-height: 20px;
+  color: $basic-black;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .example__cost {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 20px;
+    text-align: right;
+    padding-top: 11px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__cost {
+    display: flex;
+    flex-direction: row;
+    gap: 66px;
+    padding: 0;
+  }
+}

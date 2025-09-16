@@ -1,0 +1,24 @@
+.container {
+  min-width: 320px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container--wide {
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding: 0 30px;
+    min-width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    padding: 0 110px;
+    max-width: 1440px;
+  }
+}

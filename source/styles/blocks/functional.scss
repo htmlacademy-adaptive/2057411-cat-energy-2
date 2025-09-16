@@ -1,0 +1,186 @@
+.functional {
+  margin-bottom: 49px;
+}
+
+@media (min-width: $tablet-width) {
+  .functional {
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .functional__container {
+    padding-right: 75px;
+    padding-bottom: 104px;
+    box-shadow: 0 1px 0 0 #e6e6e6;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional__container {
+    padding-right: 110px;
+    padding-left: 110px;
+    padding-bottom: 66px;
+    box-shadow: none;
+  }
+}
+
+.functional__title {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic-black;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
+}
+
+.functional__list {
+  display: grid;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: functional-counter;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 132px 105px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 94px;
+  }
+}
+
+.functional__item {
+  display: grid;
+  grid-template-columns: 60px auto;
+  flex-shrink: 0;
+  gap: 20px;
+  align-items: center;
+  counter-increment: functional-counter;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .functional__item {
+    position: relative;
+    grid-template-columns: auto;
+    gap: 31px;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .functional__item::after {
+    position: absolute;
+    right: 29px;
+    bottom: -58px;
+    font-family: $primary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+    z-index: -1;
+    width: 134px;
+    height: 280px;
+    content: counter(functional-counter);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional__item::after {
+    bottom: 0;
+    right: -19px;
+  }
+}
+
+.functional__item::before {
+  content: "";
+  background-color: $accent-color;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__item::before {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.functional__item--nutrient::before {
+  background-image: url("../../icons/stack.svg#icon-leaf");
+  background-size: 30px 32px;
+}
+
+.functional__item--powder::before {
+  background-image: url("../../icons/stack.svg#icon-powder");
+  background-size: 26px 28.5px;
+}
+
+.functional__item--diet::before {
+  background-image: url("../../icons/stack.svg#icon_eat");
+  background-size: 25px 30px;
+}
+
+.functional__item--result::before {
+  background-image: url("../../icons/stack.svg#icon-result");
+  background-size: 26px 31px;
+}
+
+.functional__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-text-color;
+  z-index: 2;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .functional__item--result .functional__description {
+    width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .functional__description {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 63px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .functional__description br {
+    display: none;
+  }
+}
