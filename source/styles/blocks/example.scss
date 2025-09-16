@@ -135,7 +135,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (max-width: 1399px) {
   .example__text br {
     display: none;
   }

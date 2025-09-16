@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
-  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -16,12 +16,12 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--index">
+  <header class="main-header main-header--index" data-test="header">
     <div class="container main-header__container">
       <a class="logo main-header__logo" href="index.html">
         <picture>
-          <source width="70" height="59" type="image/svg+xml" media="(min-width:1440px)" srcset="images/logo-desktop.svg">
-          <source width="60" height="50" type="image/svg+xml" media="(min-width:768px)" srcset="images/logo-tablet.svg">
+          <source type="image/svg+xml" media="(min-width:1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
+          <source type="image/svg+xml" media="(min-width:768px)" srcset="images/logo-tablet.svg" width="60" height="50">
           <img class="logo__image" src="images/logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
         </picture>
       </a>
@@ -48,15 +48,19 @@
 
   <main class="main-container">
 
-    <section class="promo">
+    <section class="promo" data-test="hero">
       <div class="container promo__container">
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное<br>питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <a class="promo__link promo__link--tablet  button" href="#">Подобрать программу</a>
           <picture>
-            <source width="552" height="499" type="image/png" media="(min-width:1440px)" srcset="images/promo-food-desktop@1x.png 1x, images/promo-food-desktop@2x.png 2x">
-            <source width="709" height="609" type="image/png" media="(min-width:768px)" srcset="images/promo-food-tablet@1x.png 1x, images/promo-food-tablet@2x.png 2x">
+            <source type="image/webp" media="(min-width:1440px)" srcset="images/promo-food-desktop@1x.webp 1x, images/promo-food-desktop@2x.webp 2x" width="552" height="499">
+            <source type="image/webp" media="(min-width:768px)" srcset="images/promo-food-tablet@1x.webp 1x, images/promo-food-tablet@2x.webp 2x" width="709" height="609">
+            <source type="image/webp" srcset="images/promo-food-mobile@1x.webp 1x, images/promo-food-mobile@2x.webp 2x" width="280" height="270">
+
+            <source type="image/png" media="(min-width:1440px)" srcset="images/promo-food-desktop@1x.png 1x, images/promo-food-desktop@2x.png 2x" width="552" height="499">
+            <source type="image/png" media="(min-width:768px)" srcset="images/promo-food-tablet@1x.png 1x, images/promo-food-tablet@2x.png 2x" width="709" height="609">
             <img class="promo__img" src="images/promo-food-mobile@1x.png" srcset="images/promo-food-mobile@2x.png 2x" width="280" height="270" alt="Упаковка с куриным кормом">
           </picture>
           <a class="promo__link promo__link--mobile button" href="#">Подобрать программу</a>
@@ -64,7 +68,7 @@
       </div>
     </section>
 
-    <section class="programs">
+    <section class="programs" data-test="programs">
       <div class="container programs__container">
         <h2 class="visually-hidden">Программы питания</h2>
         <div class="programs__wrapper">
@@ -82,7 +86,7 @@
       </div>
     </section>
 
-    <section class="functional">
+    <section class="functional" data-test="features">
       <div class="container functional__container">
         <h2 class="functional__title">Как это работает</h2>
         <ul class="functional__list">
@@ -102,11 +106,11 @@
       </div>
     </section>
 
-    <section class="example">
+    <section class="example" data-test="proof">
       <div class="container example__container">
         <h2 class="example__title">Живой пример</h2>
         <div class="example__wrapper">
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов<br> в день.</p>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат<br> без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="example__list">
             <div class="example__list-wrapper">
               <dl class="example__description">
@@ -125,15 +129,23 @@
           <div class="slider__list">
             <div class="slider__slide slider__slide--before">
               <picture>
-                <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
-                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/cat-before-tablet@1x.webp 1x, images/cat-before-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.webp 1x, images/cat-before-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="images/cat-before-mobile@1x.webp 1x, images/cat-before-mobile@2x.webp 2x" width="280" height="256">
+
+                <source type="image/png" media="(min-width: 1440px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
                 <img class="slider__slide-image" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Толстый и худой кот">
               </picture>
             </div>
             <div class="slider__slide slider__slide--after">
               <picture>
-                <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
-                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/cat-after-tablet@1x.webp 1x, images/cat-after-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.webp 1x, images/cat-after-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="images/cat-after-mobile@1x.webp 1x, images/cat-after-mobile@2x.webp 2x" width="280" height="256">
+
+                <source type="image/png" media="(min-width: 1440px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
                 <img class="slider__slide-image" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Толстый и худой кот">
               </picture>
             </div>
@@ -143,7 +155,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" data-test="contacts">
       <div class="container contacts__container">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контактная информация</h2>
@@ -155,8 +167,12 @@
       </div>
       <div class="contacts__map-wrapper">
         <picture>
-          <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
-          <source width="1440" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/location-tabletp@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/location-desktop@1x.webp 1x, images/location-desktop@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/location-tablet@1x.webp 1x, images/location-tablet@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" srcset="images/location-mobile@1x.webp 1x, images/location-mobile@2x.webp 2x" width="320" height="362">
+
+          <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x" width="1440" height="400">
+          <source type="image/jpeg" media="(min-width: 768px)" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x" width="1440" height="400">
           <img class="contacts__map-img" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Местоположение магазина на карте">
         </picture>
         <iframe class="contacts__interactive-map" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
@@ -165,7 +181,7 @@
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <div class="container main-footer__container">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo-link" href="index.html">
