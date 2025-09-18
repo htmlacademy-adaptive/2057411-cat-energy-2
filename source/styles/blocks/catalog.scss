@@ -79,14 +79,12 @@
 
 @media (min-width: $tablet-width) {
   .catalog__item--more {
-    padding: 160px 37px 40px;
     background-image: url("../../icons/stack.svg#icon-plus-tablet");
     background-repeat: no-repeat;
     background-size: 60px 60px;
     background-position: center 50px;
     text-align: center;
-    padding-top: 160px;
-    padding-bottom: 40px;
+    padding: 160px 37px 40px;
     box-shadow: 0 0 0 2px #f2f2f2;
     align-self: end;
   }
@@ -160,14 +158,15 @@
 }
 
 .catalog__more-button {
+  display: block;
   font-family: $primary-font;
   color: $basic-text-color;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  text-decoration: none;
   width: 100%;
   background-color: #f2f2f2;
-  border: none;
   padding: 10px 39px;
 }
 
