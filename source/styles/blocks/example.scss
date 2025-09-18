@@ -32,7 +32,7 @@
 .example__list {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 33px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -95,7 +95,7 @@
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
-  padding-top: 23px;
+  padding-top: 25px;
   margin: 0;
   margin-bottom: 40px;
 }
@@ -172,7 +172,7 @@
 
 .example__option {
   position: absolute;
-  top: 49px;
+  top: 44px;
   transform: translate(50%);
   margin: 0;
   right: 50%;

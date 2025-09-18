@@ -47,6 +47,15 @@
   display: inline-block;
 }
 
+.card__link-image:hover,
+.card__link-image:focus {
+  opacity: 0.6;
+}
+
+.card__link-image:active {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-width) {
   .card__link-image {
     display: flex;
@@ -104,6 +113,15 @@
   text-transform: uppercase;
   color: $basic-text-color-2;
   text-decoration: none;
+}
+
+.card__link-title:hover,
+.card__link-title:focus {
+  opacity: 0.6;
+}
+
+.card__link-title:active {
+  opacity: 0.3;
 }
 
 .card__title {
